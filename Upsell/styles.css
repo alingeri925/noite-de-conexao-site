@@ -1730,6 +1730,96 @@ li {
     font-size: 1.35rem;
   }
 
+/* Cakto Upsell Buttons — ajuste visual para combinar com a página */
+.cakto-cta-block {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 18px auto;
+}
+
+.cakto-cta-block cakto-upsell-buttons {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+}
+
+/* Botão principal de aceitar upsell */
+.cakto-cta-block cakto-upsell-accept::part(button) {
+  width: 100%;
+  max-width: 620px;
+  min-height: 56px;
+  padding: 14px 22px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #d8ad56, #b9842d);
+  color: #2b0a12;
+  font-family: var(--font-body);
+  font-size: 0.92rem;
+  font-weight: 800;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 0 14px 30px rgba(200, 157, 69, 0.28);
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.cakto-cta-block cakto-upsell-accept::part(button):hover {
+  transform: translateY(-2px);
+  box-shadow: 0 18px 38px rgba(200, 157, 69, 0.38);
+}
+
+/* Link de recusa */
+.cakto-cta-block cakto-upsell-reject::part(button) {
+  background: transparent;
+  border: none;
+  color: inherit;
+  font-family: var(--font-body);
+  font-size: 0.76rem;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  cursor: pointer;
+  opacity: 0.82;
+}
+
+/* Quando o bloco estiver em fundo escuro */
+.offer-card .cakto-cta-block cakto-upsell-reject::part(button),
+.final-cta .cakto-cta-block cakto-upsell-reject::part(button),
+.hero-actions .cakto-cta-block cakto-upsell-reject::part(button) {
+  color: rgba(255, 249, 241, 0.76);
+}
+
+/* Quando o bloco estiver em fundo claro */
+.section .cakto-cta-block cakto-upsell-reject::part(button),
+.previews-section .cakto-cta-block cakto-upsell-reject::part(button),
+.benefits-section .cakto-cta-block cakto-upsell-reject::part(button),
+.lifestyle-section .cakto-cta-block cakto-upsell-reject::part(button) {
+  color: var(--brown-900);
+}
+
+/* Ajuste mobile */
+@media (max-width: 819px) {
+  .cakto-cta-block {
+    margin: 14px auto;
+  }
+
+  .cakto-cta-block cakto-upsell-accept::part(button) {
+    width: 100%;
+    max-width: 100%;
+    min-height: 52px;
+    padding: 12px 15px;
+    font-size: 0.79rem;
+    line-height: 1.35;
+  }
+
+  .cakto-cta-block cakto-upsell-reject::part(button) {
+    font-size: 0.7rem;
+  }
+}
+  
   .preview-arrow-prev { left: 8px; }
   .preview-arrow-next { right: 8px; }
 }
