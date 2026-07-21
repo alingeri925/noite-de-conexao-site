@@ -1819,6 +1819,38 @@ li {
     font-size: 0.7rem;
   }
 }
+
+/* Ajuste do botão Cakto dentro do mobile sticky */
+.mobile-sticky cakto-upsell-accept::part(button) {
+  min-height: 44px !important;
+  padding: 10px 13px !important;
+  display: grid !important;
+  place-items: center !important;
+  border: none !important;
+  border-radius: 10px !important;
+  background: var(--gold-500) !important;
+  color: var(--wine-950) !important;
+  font-family: var(--font-body) !important;
+  font-size: 0.76rem !important;
+  font-weight: 800 !important;
+  line-height: 1.2 !important;
+  cursor: pointer !important;
+  box-shadow: none !important;
+}
+
+.mobile-sticky cakto-upsell-accept::part(button):hover {
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+.mobile-sticky cakto-upsell-accept {
+  display: block;
+  width: auto;
+}
+
+.mobile-sticky cakto-upsell-buttons {
+  display: block;
+}
   
   .preview-arrow-prev { left: 8px; }
   .preview-arrow-next { right: 8px; }
