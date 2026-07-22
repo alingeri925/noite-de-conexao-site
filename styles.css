@@ -3686,3 +3686,14 @@ p {
     text-align: left;
   }
 }
+
+/* Ajuste de rolagem para o bloco real da oferta */
+#oferta {
+  scroll-margin-top: 90px;
+}
+
+@media (max-width: 759px) {
+  #oferta {
+    scroll-margin-top: 72px;
+  }
+}
